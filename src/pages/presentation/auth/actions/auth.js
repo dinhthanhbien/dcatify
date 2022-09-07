@@ -33,7 +33,7 @@ export function logoutUser() {
 }
 
 export function loginUser(uname, pword, navigate) {
-	// const url = 'http://183.81.32.198:8002/ecom-api/users/login';
+	// const url = 'https://183.81.32.198:8002/ecom-api/users/login';
 	// fetch(url, {
 	// 	method: 'POST',
 	// 	headers: {
@@ -59,7 +59,7 @@ export function loginUser(uname, pword, navigate) {
 	// 	.catch((error) => {
 	// 		console.error('Error:', error);
 	// 	});
-	if (uname === 'bossdung' && pword === '12345678') {
+	if ((uname === 'bossdung' && pword === 'admin') || (uname === 'dungbq.ftu@gmail.com' && pword === 'admin') ){
 		localStorage.setItem('authenticated', true);
 		localStorage.setItem('username', uname);
 		navigate('/dashboard');
